@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="GB2312" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>IBMQ2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="reset.css">
+    <script src="main.js"></script>
+    <style>
+        body {
+            background-color: #222a3d;
+        }
+
+        .banner {
+            width: 100%;
+            height: 481px;
+            background-image: url('images/banner.jpg')
+        }
+
+        .font {
+            height: 200px;
+            background-color: #c6e6ff;
+            border-radius: 15px;
+            width: 1200px;
+            box-sizing: border-box;
+            margin: 35px auto;
+            padding: 35px 120px;
+        }
+
+        .font p {
+            margin-top: 15px;
+            font-size: 20px;
+            line-height: 150%;
+        }
+
+        .font h1 {
+            text-align: center
+        }
+
+        .rpa {
+            width: 1200px;
+            height: 750px;
+            background-color: white;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            margin: 40px auto 0px;
+        }
+
+        .raptop {
+            background-image: url('images/2.jpg');
+            height: 242px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px
+        }
+
+        .raptopone {
+            font-size: 30px;
+            font-weight: bolder;
+            position: relative;
+            left: 487px;
+            top: 112px
+        }
+
+        .raptoptwo {
+            position: relative;
+            top: 10px;
+            left: 446px;
+            top: 170px;
+            font-size: 20px
+        }
+
+        .rapbottom {
+            width: 1136px;
+            height: 485px;
+            border: 1px solid black;
+            margin: 0 auto
+        }
+
+        .rapbottomfirst {
+            width: 370px;
+            border: 1px solid black;
+            height: 480px;
+            float: left;
+        }
+
+        .rapbottomfirsttop {
+            height: 236px;
+            width: 100%;
+            /* border: 1px solid red; */
+            position: relative
+        }
+
+        .rapbottomfirsttop div {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            line-height: 52px;
+            height: 52px;
+            background-color: #fc6121
+        }
+
+        .rapbottomfirsttop div>p {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .rapbottomfirstbottom {
+            height: 236px;
+            width: 100%;
+            /* border: 1px solid red; */
+            margin-top: 10px;
+            position: relative
+        }
+
+        .rapbottomfirstbottom div {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 52px;
+            line-height: 52px;
+            text-align: center;
+            background-color: #fc6121
+        }
+
+        .rapbottomfirstbottom div>p {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .rapbottomsecond {
+            width: 370px;
+            /* border: 1px solid black; */
+            height: 485px;
+            float: left;
+            margin-left: 10px;
+            position: relative
+        }
+
+        .rapbottomsecond div {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 52px;
+            line-height: 52px;
+            text-align: center;
+            background-color: #fc6121;
+            font-size: 16px;
+        }
+
+        .rapbottomthird {
+            width: 370px;
+            /* border: 1px solid black; */
+            height: 480px;
+            float: left;
+            margin-left: 10px
+        }
+
+        .rapbottomthirdtop {
+            height: 236px;
+            width: 100%;
+            /* border: 1px solid red; */
+            position: relative;
+        }
+
+        .rapbottomthirdtop div {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 52px;
+            line-height: 52px;
+            text-align: center;
+            background-color: #fc6121
+        }
+
+        .rapbottomthirdtop div>p {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .rapbottomthirdbottom {
+            height: 236px;
+            width: 100%;
+            /* border: 1px solid red; */
+            margin-top: 10px;
+            position: relative
+        }
+
+        .rapbottomthirdbottom div {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 52px;
+            line-height: 52px;
+            text-align: cennter;
+            background-color: #fc6121
+        }
+
+        .rapbottomthirdbottom div>p {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .daka {
+            width: 1200px;
+            height: 255px;
+            background-image: url('images/5.jpg');
+            margin: 0 auto;
+        }
+
+        .daka .first {
+            position: relative;
+            left: 45px;
+            font-size: 16px;
+        }
+
+        .daka .second {
+            position: relative;
+            left: 506px;
+            top: 102px;
+            font-size: 40px;
+
+
+        }
+
+        .daka .third {
+            position: relative;
+            left: 578px;
+            top: 161px;
+            font-size: 16px;
+
+        }
+
+        .dkshow {
+            width: 1200px;
+            height: 500px;
+            margin: 0 auto;
+            /* border: 1px solid red; */
+            background-color: white;
+            padding: 0px 30px;
+            box-sizing: border-box
+        }
+
+        .clearfix:after {
+            display: block;
+            clear: both;
+            content: "";
+            visibility: hidden;
+            height: 0;
+        }
+
+        .clearfix {
+            zoom: 1;
+        }
+
+        /*footer*/
+
+        #floor {
+            line-height: 50px;
+            padding: 30px 0;
+            text-align: center;
+            color: #c6e6ff;
+            background: #222a3e;
+        }
+
+        #floor a {
+            font-size: 16px;
+            margin: 0 5px;
+            color: #c6e6ff;
+        }
+
+        #floor .nt {
+            height: 45px;
+            line-height: 45px;
+            color: #c6e6ff;
+        }
+
+        #CopyRight {
+            font-size: 16px;
+            padding-top: 10px;
+            color: #c6e6ff;
+        }
+
+        /*footer end*/
+    </style>
+</head>
+<!-- 统计 -->
+    <!--#include virtual="/w/i/cb/az.html" -->
+<body>
+    <div class="banner">
+    </div>
+    <div class="font">
+        <div>
+            <h1>前言</h1>
+        </div>
+        <p>机器人流程自动化是一种新兴的程序软件工具，使用诸如自动化软件的技术来模拟流程的步骤，而不会影响现有的IT基础设施，以加快后台任务，包括数据输入，采购订单发放，在线访问凭据的创建，或需要“旋转椅”访问多个系统的进程。</p>
+    </div>
+    <div class="rpa">
+        <div class="raptop">
+            <p class="raptopone">什么是RPA？</p>
+            <p class="raptoptwo">PRA 相关解读、原创文章、新闻等</p>
+        </div>
+        <div class="rapbottom">
+            <div class="rapbottomfirst">
+                <div class="rapbottomfirsttop">
+                    <img src="images/3.jpg" alt="">
+                    <div>
+                        <p>一个”机器人流程自动化”的时代正悄悄来临！</p>
+                    </div>
+                </div>
+                <div class="rapbottomfirstbottom">
+                    <img src="images/3.jpg" alt="">
+                    <div>
+                        <p>一个”机器人流程自动化”的时代正悄悄来临！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="rapbottomsecond" style="position: relative">
+                <img src="images/4.jpg" alt="">
+                <div>
+                    <p>一个”机器人流程自动化”的时代正悄悄来临！</p>
+                </div>
+
+            </div>
+            <div class="rapbottomthird">
+                <div class="rapbottomthirdtop">
+                    <img src="images/3.jpg" alt="">
+                    <div>
+                        <p>一个”机器人流程自动化”的时代正悄悄来临！</p>
+                    </div>
+
+                </div>
+                <div class="rapbottomthirdbottom">
+                    <img src="images/3.jpg" alt="">
+                    <div>
+                        <p>一个”机器人流程自动化”的时代正悄悄来临！</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="daka">
+        <p class="first">一个”机器人流程自动化”的时代正悄悄来临！</p>
+        <p class="second">RPA大咖说</p>
+        <p class="third">比特大讲堂</p>
+    </div>
+    <div class="dkshow">
+        <div style="float: left;width: 538px;height: 478px;border: 1px solid gold;background-color: blueviolet;position: relative">
+            <p style="position: absolute; bottom: -25px;font-size: 14px">PRA大咖说PRA大咖说PRA大咖说PRA大咖说PRA大咖说 副本</p>
+        </div>
+
+        <div style="float: left;width: 237px;height: 500px;margin-left: 16px;">
+            <div>
+                <div style="width: 100%;height: 139px;border: 1px solid red;"></div>
+                <p style="font-size: 16px;text-align: center;margin-top: 3px;margin-bottom: 5px">啊啊啊啊啊啊啊啊啊啊</p>
+            </div>
+            <div>
+                <div style="width: 100%;height: 139px;border: 1px solid red;"></div>
+                <p style="font-size: 16px;text-align: center;margin-top: 3px;margin-bottom: 5px">啊啊啊啊啊啊啊啊啊啊</p>
+            </div>
+            <div>
+                <div style="width: 100%;height: 138px;border: 1px solid red;"></div>
+                <p style="font-size: 16px;text-align: center;margin-top: 3px;margin-bottom: 5px">啊啊啊啊啊啊啊啊啊啊</p>
+            </div>
+        </div>
+
+        <div style="float: right;;width: 332px;height: 500px;">
+            <div class="clearfix">
+                <div style="background-image: url('images/6.jpg');width: 150px;height: 165px;float: left;">
+                    <img src="images/3.jpg" width="136px" height="136px" style="border-radius: 50%;position: relative;left: 4px;top: 10px" alt="">
+                </div>
+                <div style="float: right;width: 50%;padding-top: 30px">
+                    <p style="font-size: 14px">大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖</p>
+                </div>
+            </div>
+
+            <div class="clearfix">
+                <div style="background-image: url('images/6.jpg');width: 150px;height: 165px;float: left;">
+                    <img src="images/3.jpg" width="136px" height="136px" style="border-radius: 50%;position: relative;left: 4px;top: 10px" alt="">
+                </div>
+                <div style="float: right;width: 50%;padding-top: 30px">
+                    <p style="font-size: 14px">大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖</p>
+                </div>
+            </div>
+
+            <div class="clearfix">
+                <div style="background-image: url('images/6.jpg');width: 150px;height: 165px;float: left;">
+                    <img src="images/3.jpg" width="136px" height="136px" style="border-radius: 50%;position: relative;left: 4px;top: 10px" alt="">
+                </div>
+                <div style="float: right;width: 50%;padding-top: 30px">
+                    <p style="font-size: 14px">大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖简介大咖</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="border-bottom-left-radius: 15px;border-bottom-right-radius: 15px;margin: 0 auto;width: 1200px;background-image: url('images/7.jpg');height: 130px"></div>
+    <div style="width: 1200px;margin: 0 auto; background-image: url('images/8.jpg');height: 252px;border-top-left-radius: 15px;border-top-right-radius: 15px;margin-top: 50px">
+        <p style="font-size: 40px;position: relative;top:103px;left: 490px;">
+            我的机器人同事
+        </p>
+        <p style="font-size: 20px;position: relative;top:160px;left: 560px;">案例故事，可扩充</p>
+    </div>
+    <div style="width: 1200px;padding:  0 30px;height: 425px;margin: 0 auto;background-color: white;box-sizing: border-box;">
+        <div style="float: left;;width: 600px;height: 380px;background-image: url('images/3.jpg');position: relative">
+            <p style="position: absolute;bottom: -30px;width:600px;text-align: center;font-size: 14px">某IT公司大咖采购部</p>
+        </div>
+        <div style="float: right;width: 480px;height: 380px;padding-top: 17px;box-sizing: border-box">
+            <div>
+                <p style="font-size: 16px">发票付款流程关键且敏感 副本</p>
+                <p style="font-size: 14px">每年该公司采购部要与数干家全球供应商打交道，管理和交易金额高达数十亿美元。这些交易每年会生成约200万张发票...这些交易每年会生成约200万张发票，这些交易每年会生成约200万张发票...</p>
+
+            </div>
+            <div style="margin-top: 45px">
+                <p style="font-size: 16px">发票付款流程关键且敏感 副本</p>
+                <p style="font-size: 14px">每年该公司采购部要与数干家全球供应商打交道，管理和交易金额高达数十亿美元。这些交易每年会生成约200万张发票...这些交易每年会生成约200万张发票，这些交易每年会生成约200万张发票...</p>
+
+            </div>
+            <div style="margin-top: 45px">
+                <p style="font-size: 16px">发票付款流程关键且敏感 副本</p>
+                <p style="font-size: 14px">每年该公司采购部要与数干家全球供应商打交道，管理和交易金额高达数十亿美元。这些交易每年会生成约200万张发票...这些交易每年会生成约200万张发票，这些交易每年会生成约200万张发票...</p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div style="width: 1200px;margin: 0 auto ;background-image: url('images/9.jpg');height: 296px;">
+        <p style="font-size: 40px;position: relative;left: 523px;top: 161px;">RPA召集令</p>
+        <p style="font-size: 20px;position: relative;left: 557px;top: 209px;">青岛峰会部分</p>
+    </div>
+    <div class="clearfix" style="border-bottom-left-radius: 15px;border-bottom-right-radius: 15px;width: 1200px; margin: 0 auto;height: 500px;background-color: white;padding: 0 30px;box-sizing: border-box">
+        <div style="float: left;width: 619px;height: 423px;background-image: url('images/3.jpg');position: relative">
+            <p style="width: 100%;text-align: center;font-size:16px;position: absolute;bottom: -30px">现场演讲试图跟图文</p>
+        </div>
+        <div style="float: right;">
+            <div style="float: left;width: 243px;height: 170px;background-image: url('images/3.jpg');margin-right: 10px">
+                <div style="width: 243px;height: 170px;background-image: url('images/3.jpg')"></div>
+                <p style="font-size: 16px;width: 100%;text-align: center">嘉宾主要观点</p>
+                <div style="margin-top: 20px;width: 243px;height: 170px;background-image: url('images/3.jpg')"></div>
+                <p style="font-size: 16px;width: 100%;text-align: center">嘉宾主要观点</p>
+
+            </div>
+            <div style="float: right;width: 243px;">
+                <div style="width: 243px;height: 170px;background-image: url('images/3.jpg')"></div>
+                <p style="font-size: 16px;width: 100%;text-align: center">嘉宾主要观点</p>
+                <div style="margin-top: 20px;width: 243px;height: 170px;background-image: url('images/3.jpg')"></div>
+                <p style="font-size: 16px;width: 100%;text-align: center">嘉宾主要观点</p>
+            </div>
+        </div>
+    </div>
+    <!--floor-->
+    <!--floor-->
+    <div id="floor" style="margin-top: 50px">
+        <div class="nt">
+            <a rel="nofollow" href="http://www.tianjimedia.com/chinabyte/">关于我们</a> |
+            <a rel="nofollow" href="http://www.tianjimedia.com/english/31/8262031.shtml">About us
+            </a> |
+            <a rel="nofollow" href="http://www.tianjimedia.com/attorney/">网站律师</a> |
+            <a rel="nofollow" href="http://www.tianjimedia.com/ar/">天极服务</a>
+            |
+            <a href="http://hot.chinabyte.com/">热点新闻</a> |
+            <a href="http://maillist.chinabyte.com/">电子杂志</a> |
+            <a href="http://rss.chinabyte.com/">RSS订阅</a> |
+            <a rel="nofollow" href="http://www.tianjimedia.com/invitation/">加入我们</a> |
+            <a rel="nofollow" href="http://www.tianjimedia.com/tjdt/list/">天极动态</a> |
+            <a href="http://www.chinabyte.com/sitemap.html">网站地图</a> |
+            <a rel="nofollow" href="http://passport.chinabyte.com/login.jsp?auto=1&amp;returnurl=http://bbs.chinabyte.com/">网友上传</a>
+        </div>
+        <div id="CopyRight">Copyright &#169; 1997-2018 Chinabyte.com, All Rights Reserved 版权所有 天极网络</div>
+    </div>
+
+
+
+
+</body>
+
+</html>
